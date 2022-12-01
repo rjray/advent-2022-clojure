@@ -8,6 +8,8 @@ The numbers in parentheses in the descriptions of the files represent the rank I
 
 Day 1 (--/--).
 
+Didn't start this one until about 5:30PM on Dec 1st, so there's no ranking info to be had.
+
 ## day02.clj
 
 Day 2 (--/--).
