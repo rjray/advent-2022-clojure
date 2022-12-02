@@ -6,13 +6,13 @@ The numbers in parentheses in the descriptions of the files represent the rank I
 
 ## day01.clj
 
-Day 1 (--/--).
+Day 1 (117847/112793, approx. 15 min).
 
 Didn't start this one until about 5:30PM on Dec 1st, so there's no ranking info to be had.
 
 ## day02.clj
 
-Day 2 (--/--).
+Day 2 (11129/11550, 44 min).
 
 ## day03.clj
 
