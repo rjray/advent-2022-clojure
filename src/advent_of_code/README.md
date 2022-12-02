@@ -14,6 +14,8 @@ Didn't start this one until about 5:30PM on Dec 1st, so there's no ranking info 
 
 Day 2 (11129/11550, 44 min).
 
+This took much longer than it should have because I did it brute-force instead of thinking it out...
+
 ## day03.clj
 
 Day 3 (--/--).
