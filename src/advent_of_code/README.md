@@ -18,7 +18,9 @@ This took much longer than it should have because I did it brute-force instead o
 
 ## day03.clj
 
-Day 3 (--/--).
+Day 3 (7751/5831, 27 min).
+
+This one was fun, and Clojure's native support for sets and set operations made it even easier.
 
 ## day04.clj
 
