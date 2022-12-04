@@ -24,7 +24,9 @@ This one was fun, and Clojure's native support for sets and set operations made 
 
 ## day04.clj
 
-Day 4 (--/--).
+Day 4 (71071/68913, about 30 min).
+
+Another sets-based problem!
 
 ## day05.clj
 
