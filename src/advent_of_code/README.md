@@ -30,7 +30,9 @@ Another sets-based problem!
 
 ## day05.clj
 
-Day 5 (--/--).
+Day 5 (82318/79988, unknown).
+
+Borrowed the parsing code and some other bits.
 
 ## day06.clj
 
