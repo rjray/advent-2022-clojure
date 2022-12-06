@@ -36,7 +36,9 @@ Borrowed the parsing code and some other bits.
 
 ## day06.clj
 
-Day 6 (--/--).
+Day 6 (18189/17565).
+
+Weak. Brute forced it.
 
 ## day07.clj
 
