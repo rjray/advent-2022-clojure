@@ -42,7 +42,9 @@ Weak. Brute forced it.
 
 ## day07.clj
 
-Day 7 (--/--).
+Day 7 (54835/52953).
+
+Strong. File-system parsing and depth-first searching. A typo caused me to get part 1 wrong on the first try. Ugh.
 
 ## day08.clj
 
