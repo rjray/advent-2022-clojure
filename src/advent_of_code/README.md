@@ -48,7 +48,9 @@ Strong. File-system parsing and depth-first searching. A typo caused me to get p
 
 ## day08.clj
 
-Day 8 (--/--).
+Day 8 (15093/13986).
+
+More ugh.
 
 ## day09.clj
 
