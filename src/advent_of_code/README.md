@@ -54,7 +54,9 @@ More ugh.
 
 ## day09.clj
 
-Day 9 (--/--).
+Day 9 (49106/39353).
+
+I had an advantage from doing it so late, that I knew what the second half was. I wrote the first half with enough engineering to handle the second as well.
 
 ## day10.clj
 
