@@ -60,7 +60,9 @@ I had an advantage from doing it so late, that I knew what the second half was. 
 
 ## day10.clj
 
-Day 10 (--/--).
+Day 10 (12580/11514).
+
+Part 1 was a breeze, part 2 was another "read the letters this ASCII stream forms" kind of puzzles, which don't do much for me. But part 2 worked right the first time, no debugging except for getting the screen output readable.
 
 ## day11.clj
 
