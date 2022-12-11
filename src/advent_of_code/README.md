@@ -8,7 +8,7 @@ The numbers in parentheses in the descriptions of the files represent the rank I
 
 Day 1 (117847/112793, approx. 15 min).
 
-Didn't start this one until about 5:30PM on Dec 1st, so there's no ranking info to be had.
+Didn't start this one until about 5:30PM on Dec 1st. Good time overall, but high rank-numbers because of this.
 
 ## day02.clj
 
