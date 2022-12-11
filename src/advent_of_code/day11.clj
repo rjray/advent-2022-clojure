@@ -34,8 +34,6 @@
   (let [monkey   (monkeys m-idx)
         worry    (-> ((:fn monkey) item)
                      dim)
-        ;;worry    ((:fn monkey) item)
-        ;;worry    (if div3 (int (/ worry 3)) worry)
         test     (mod worry (:test monkey))
         target   (if (zero? test) (:true monkey) (:false monkey))
         new_m    (update (update monkey :items rest) :handled inc)
