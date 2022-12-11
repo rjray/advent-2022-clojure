@@ -66,7 +66,9 @@ Part 1 was a breeze, part 2 was another "read the letters this ASCII stream form
 
 ## day11.clj
 
-Day 11 (--/--).
+Day 11 (9132/7338, 2 hours 36 min).
+
+Part 1 took about 5 minutes to crack the parsing and 1:40 more to get a working solution. Part 2 was a "math trick" problem. After my solution ran over 30 minutes without completing, I looked closer at the math and re-did parts of it. Took less than a minute, once fixed.
 
 ## day12.clj
 
