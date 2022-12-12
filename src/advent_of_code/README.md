@@ -72,7 +72,13 @@ Part 1 took about 5 minutes to crack the parsing and 1:40 more to get a working 
 
 ## day12.clj
 
-Day 12 (7715/7799).
+Day 12 (7715/7799, about 2 hours 30 min).
+
+This was tough, mentally. I got the parsing of the data done almost immediately, then struggled to remember how to do a search algorithm in Clojure. I also waffled between Dijkstra and A*, before realizing that a breadth-first-search starting from the destination point and working backwards was what I needed.
+
+Part 2 was actually fairly easy to do, once part 1 was finished. I re-used part 1 by solving 2 as a series of point-to-point searches, then taking the shortest result.
+
+Thus far, I haven't had the time (or energy) to do any "improved" versions of days, but I might for this one. I think I can make it a lot more understandable.
 
 ## day13.clj
 
