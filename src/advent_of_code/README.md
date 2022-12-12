@@ -72,7 +72,7 @@ Part 1 took about 5 minutes to crack the parsing and 1:40 more to get a working 
 
 ## day12.clj
 
-Day 12 (--/--).
+Day 12 (7715/7799).
 
 ## day13.clj
 
