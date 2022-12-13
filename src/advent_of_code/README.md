@@ -80,6 +80,10 @@ Part 2 was actually fairly easy to do, once part 1 was finished. I re-used part 
 
 Thus far, I haven't had the time (or energy) to do any "improved" versions of days, but I might for this one. I think I can make it a lot more understandable.
 
+## day12bis.clj
+
+This is a cleaned-up version, one that gets rid of some redundancy that came from me misunderstanding how to do a breadth-first search properly. It's shorter and much faster (particular on part 2) than the original.
+
 ## day13.clj
 
 Day 13 (5740/5813).
