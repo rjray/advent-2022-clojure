@@ -82,7 +82,9 @@ Thus far, I haven't had the time (or energy) to do any "improved" versions of da
 
 ## day13.clj
 
-Day 13 (--/--).
+Day 13 (5740/5813).
+
+Interesting. Though I haven't used [EDN](http://edn-format.org/) before, I immediately recognized the input format as being EDN-compliant. That simplified the parsing immensely. Getting part 1 to work was a little tricky, but once it was done it was a small wrapper to turn the Boolean comparison into something that `sort` could use for ordering and part 2 was done.
 
 ## day14.clj
 
