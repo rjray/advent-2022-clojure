@@ -92,7 +92,9 @@ Interesting. Though I haven't used [EDN](http://edn-format.org/) before, I immed
 
 ## day14.clj
 
-Day 14 (--/--).
+Day 14 (24385/23669).
+
+Another interesting one. Started much later than normal, hence the high numbers. Part 1 went fine but a silly assumption on part 2 led to some lengthy debugging.
 
 ## day15.clj
 
