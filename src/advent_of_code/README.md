@@ -98,7 +98,9 @@ Another interesting one. Started much later than normal, hence the high numbers.
 
 ## day15.clj
 
-Day 15 (--/--).
+Day 15 (26462/22531).
+
+Part 1 was a wreck of a brute-force approach that led to my second incorrect answer because of an algorithmic error that took forever to solve. Part 2 was only solved by converting a Python solution. Not my favorite day.
 
 ## day16.clj
 
