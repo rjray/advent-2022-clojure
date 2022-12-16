@@ -102,6 +102,10 @@ Day 15 (26462/22531).
 
 Part 1 was a wreck of a brute-force approach that led to my second incorrect answer because of an algorithmic error that took forever to solve. Part 2 was only solved by converting a Python solution. Not my favorite day.
 
+## day15bis.cls
+
+Some small clean-up on part 2, changing a `for`-comprehension to a `loop` so that it terminates before reaching 4000000. Didn't really help much, because the matching value of `y` was pretty close to 4000000 anyway.
+
 ## day16.clj
 
 Day 16 (--/--).
