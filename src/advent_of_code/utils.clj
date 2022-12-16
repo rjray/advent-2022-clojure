@@ -17,3 +17,8 @@
   (->> input
        to-lines
        (mapv vec)))
+
+(defn parse-out-longs
+  "Parse out all numbers in `line` that are integers (longs)"
+  [line]
+  (re-seq #"-?\d+" line))
