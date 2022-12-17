@@ -114,7 +114,9 @@ NGL... I gave up on this and used someone else's Python solution just to get pas
 
 ## day17.clj
 
-Day 17 (--/--).
+Day 17 (12956/8238).
+
+.
 
 ## day18.clj
 
