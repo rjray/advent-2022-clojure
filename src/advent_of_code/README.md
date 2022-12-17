@@ -108,7 +108,9 @@ Some small clean-up on part 2, changing a `for`-comprehension to a `loop` so tha
 
 ## day16.clj
 
-Day 16 (--/--).
+Day 16 (16555/11496).
+
+NGL... I gave up on this and used someone else's Python solution just to get past it. The code I'm checking in is incomplete and incorrect for part 1. I am not happy about this.
 
 ## day17.clj
 
