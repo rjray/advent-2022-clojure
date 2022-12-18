@@ -16,22 +16,22 @@
    [:o [[0 1] [1 1]
         [0 0] [1 0]]]])
 
-(defn inside-walls? [[x y]]
+(defn inside? [[x y]]
   (and (<= 0 x 6)
        (<= 0 y)))
 
-(defn freeze [cup [name points]]
-  (into cup (map vector points (repeat name))))
+(defn set-block [field [name points]]
+  (into field (map vector points (repeat name))))
 
-(defn down [cup [name points :as shape]]
+(defn down [field [name points :as shape]]
   (let [next (map #(update % 1 dec) points)]
-    (if (every? (every-pred inside-walls? (comp not cup)) next)
-      [cup [name next]]
-      [(freeze cup shape) nil])))
+    (if (every? (every-pred inside? (comp not field)) next)
+      [field [name next]]
+      [(set-block field shape) nil])))
 
-(defn side [cup blow [name points :as shape]]
+(defn side [field blow [name points :as shape]]
   (let [next (map #(update % 0 + blow) points)]
-    (if (every? (every-pred inside-walls? (comp not cup)) next)
+    (if (every? (every-pred inside? (comp not field)) next)
       [name next]
       shape)))
 
@@ -39,21 +39,21 @@
   [name (for [[x y] points] [(+ 2 x) (+ 4 height y)])])
 
 (defn drop-shape
-  [{:keys [cup height wind]} shape]
-  (loop [cup cup
-         [blow & wind] wind
+  [{:keys [field height gases]} shape]
+  (loop [field field
+         [blow & gases] gases
          shape (initialize shape height)]
-    (let [[cup shape] (->> shape (side cup blow) (down cup))]
+    (let [[field shape] (->> shape (side field blow) (down field))]
       (if shape
-        (recur cup wind shape)
-        {:cup cup
-         :height (->> cup keys (map second) (reduce max -1))
-         :wind wind}))))
+        (recur field gases shape)
+        {:field field
+         :height (->> field keys (map second) (reduce max -1))
+         :gases gases}))))
 
 (defn heights [input]
-  (let [wind (keep {\> 1 \< -1} input)]
+  (let [gases (keep {\> 1 \< -1} input)]
     (->> (cycle shapes)
-         (reductions drop-shape {:cup {} :height -1 :wind (cycle wind)})
+         (reductions drop-shape {:field {} :height -1 :gases (cycle gases)})
          (map :height))))
 
 (defn part-1

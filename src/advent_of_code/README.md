@@ -116,7 +116,7 @@ NGL... I gave up on this and used someone else's Python solution just to get pas
 
 Day 17 (12956/8238).
 
-.
+Works. I borrowed the representation of the blocks and some of the logic from `nbardiuk`. The second half is a "classic" AoC twist; do what you did in part 1, but do it an ungodly number of times. The answer to these is (almost) always to look for a cycle and multiply things out.
 
 ## day18.clj
 
