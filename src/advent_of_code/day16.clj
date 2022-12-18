@@ -31,7 +31,8 @@
               (cond
                 (nil? t)                      [queue cost]
                 (< nsteps (get cost t ##Inf)) (recur ts
-                                                     (conj queue [t nsteps])
+                                                     (concat queue
+                                                             (list [t nsteps]))
                                                      (assoc cost
                                                             t nsteps))
                 :else                         (recur ts queue cost)))]
@@ -55,10 +56,11 @@
     (cond
       (nil? pos) paths
       :else
-      (let [neighbors (for [n (keys (shortest pos))
-                            :when (and (not (seen n))
-                                       (< (get-in shortest [pos n]) time))]
-                        n)
+      (let [neighbors (sort (for [n (keys (shortest pos))
+                                  :when (and (not (seen n))
+                                             (< (get-in shortest
+                                                        [pos n]) time))]
+                              n))
             paths     (if (< (get paths seen -1) acc-flow)
                         (assoc paths seen acc-flow)
                         paths)
@@ -71,8 +73,9 @@
                                                    (get-in shortest [pos n]) 1)
                                        new-flow (* (:rate (graph n)) new-time)
                                        new-seen (conj seen n)]
-                                   (conj queue [n (+ acc-flow new-flow)
-                                                new-time new-seen])))))]
+                                   (concat queue
+                                           (list [n (+ acc-flow new-flow)
+                                                  new-time new-seen]))))))]
         (recur queue paths)))))
 
 (defn- solve-1 [time graph]
