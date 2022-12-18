@@ -8,11 +8,11 @@ The `resources` directory contains the input data for each day. These files are 
 
 ## Stats
 
-Number of answers correct on first submission: 31/34
+Number of answers correct on first submission: 33/36
 
-Highest finish for first half: 5740 (day 13)
+Highest finish for first half: 4103 (day 18)
 
-Highest finish for second half: 5831 (day 13)
+Highest finish for second half: 3502 (day 18)
 
 ## Usage
 

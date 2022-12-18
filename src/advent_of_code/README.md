@@ -120,7 +120,9 @@ Works. I borrowed the representation of the blocks and some of the logic from `n
 
 ## day18.clj
 
-Day 18 (--/--).
+Day 18 (4103/3502).
+
+My best finish so far this year (not bad, since I'm usually not starting right at the release of each day). Part 1 was straightforward, but I wasted time on part 2 on a flawed analysis. When I saw that the top placers on the reddit thread had all used some variant of BFS, I rewrote part 2 and got the answer.
 
 ## day19.clj
 
