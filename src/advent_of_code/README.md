@@ -126,7 +126,9 @@ My best finish so far this year (not bad, since I'm usually not starting right a
 
 ## day19.clj
 
-Day 19 (--/--).
+Day 19 (7885/6912).
+
+I had to take a lot from a Python solution to get through this one. The heuristics that were needed just escaped me, for the most part. I also got the same stack-overflow errors I had gotten on day 16. Advice from the Clojure Slack lead me to the [PersistentQueue](https://www.javadoc.io/doc/org.clojure/clojure/1.11.1/clojure/lang/PersistentQueue.html) interface, which beat back the stack overflows. However, I did have to increase the JVM heap allocation to get through part 2.
 
 ## day20.clj
 
