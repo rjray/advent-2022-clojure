@@ -7,5 +7,6 @@
                  [org.clojure/math.numeric-tower "0.0.4"]
                  [org.clojure/math.combinatorics "0.1.6"]]
   :plugins [[lein-kibit "0.1.6"]]
+  :jvm-opts ["-Xmx2G"]
   :main advent-of-code.core
   :repl-options {:init-ns advent-of-code.core})
