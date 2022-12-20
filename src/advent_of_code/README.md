@@ -134,7 +134,9 @@ I had to take a lot from a Python solution to get through this one. The heuristi
 
 ## day20.clj
 
-Day 20 (--/--).
+Day 20 (10730/9860).
+
+Ahh, nothing says AoC like a problem based around modulo math. I struggled with the math for the `mix` operation, then slept on it. After getting up and seeing a comment by someone from NVIDIA, I got `mix` working and part 1 went quickly. Part 2 was surprisingly easy by comparison, because my approach to part 1 kept the original positions of each number in the data.
 
 ## day21.clj
 
