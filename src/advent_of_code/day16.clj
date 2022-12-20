@@ -1,6 +1,7 @@
 (ns advent-of-code.day16
   (:require [advent-of-code.utils :as u]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [clojure.set :as set]))
 
 (def ^:private line-re #"Valve (\w+).*rate=(\d+);.*valves? (.*)")
 
@@ -52,37 +53,43 @@
                                                 [e s] cost)))))))))
 
 (defn- traverse-all [shortest graph time]
-  (loop [[[pos acc-flow time seen] & qs] [["AA" 0 time #{}]], paths {}]
-    (cond
-      (nil? pos) paths
-      :else
-      (let [neighbors (sort (for [n (keys (shortest pos))
-                                  :when (and (not (seen n))
-                                             (< (get-in shortest
-                                                        [pos n]) time))]
-                              n))
-            paths     (if (< (get paths seen -1) acc-flow)
-                        (assoc paths seen acc-flow)
-                        paths)
-            queue     (loop [[n & ns] neighbors, queue qs]
-                        (cond
-                          (nil? n) queue
-                          :else
-                          (recur ns
-                                 (let [new-time (- time
-                                                   (get-in shortest [pos n]) 1)
-                                       new-flow (* (:rate (graph n)) new-time)
-                                       new-seen (conj seen n)]
-                                   (concat queue
-                                           (list [n (+ acc-flow new-flow)
-                                                  new-time new-seen]))))))]
-        (recur queue paths)))))
+  (let [start [["AA" 0 time #{}]]
+        queue (into clojure.lang.PersistentQueue/EMPTY start)]
+    (loop [queue queue, paths {}]
+      (let [[pos acc-flow time seen] (peek queue), queue (pop queue)]
+        #_(if (zero? (mod (count queue) 1000))
+            (prn time (count queue)))
+        (cond
+          (nil? pos) paths
+          :else
+          (let [neighbors (sort (for [n (keys (shortest pos))
+                                      :when (and (not (seen n))
+                                                 (< (get-in shortest
+                                                            [pos n]) time))]
+                                  n))
+                paths     (if (< (get paths seen -1) acc-flow)
+                            (assoc paths seen acc-flow)
+                            paths)
+                new-moves (loop [[n & ns] neighbors, moves []]
+                            (cond
+                              (nil? n) moves
+                              :else
+                              (recur ns
+                                     (let [new-time (- time
+                                                       (get-in shortest
+                                                               [pos n]) 1)
+                                           new-flow (* (:rate (graph n))
+                                                       new-time)
+                                           new-seen (conj seen n)]
+                                       (conj moves [n (+ acc-flow new-flow)
+                                                    new-time new-seen])))))]
+            (recur (into queue new-moves) paths)))))))
 
-(defn- solve-1 [time graph]
+(defn- solve [time graph]
   (let [non-zero       (get-nonzero-valves graph)
         shortest-paths (shortest-connections non-zero graph)
         paths          (traverse-all shortest-paths graph time)]
-    (apply max (vals paths))))
+    paths))
 
 (defn part-1
   "Day 16 Part 1"
@@ -91,9 +98,23 @@
        u/to-lines
        (map parse-line)
        to-graph
-       (solve-1 30)))
+       (solve 30)
+       vals
+       (apply max)))
+
+(defn- best-disjoint [paths]
+  (for [a (keys paths), b (keys paths)
+        :when (and (not= a b)
+                   (empty? (set/intersection a b)))]
+    (+ (paths a) (paths b))))
 
 (defn part-2
   "Day 16 Part 2"
   [input]
-  input)
+  (->> input
+       u/to-lines
+       (map parse-line)
+       to-graph
+       (solve 26)
+       best-disjoint
+       (apply max)))

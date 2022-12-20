@@ -112,6 +112,8 @@ Day 16 (16555/11496).
 
 NGL... I gave up on this and used someone else's Python solution just to get past it. The code I'm checking in is incomplete and incorrect for part 1. I am not happy about this.
 
+(**Edit: 12/19**: Having solved day 19 by use of the `PersistentQueue` interface, I returned to this one. I was able to get the correct answers for both part 1 and part 2 with no change to my code other than using `PersistentQueue` in place of my sequence-based queue. Feeling marginally better, now.)
+
 ## day17.clj
 
 Day 17 (12956/8238).
