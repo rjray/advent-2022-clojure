@@ -140,7 +140,9 @@ Ahh, nothing says AoC like a problem based around modulo math. I struggled with 
 
 ## day21.clj
 
-Day 21 (--/--).
+Day 21 (14470/11489).
+
+The inevitable parsing-mathematical-expressions problem. Part 1 was very straightforward, but part 2's twist was more of a challenge. I didn't think about the overall function being linear until I read some comments on the Clojure Slack's AoC channel. I imagine my part 2 looks a lot like others' part 2 code, just because that factor reduces the problem to fairly simple steps.
 
 ## day22.clj
 
