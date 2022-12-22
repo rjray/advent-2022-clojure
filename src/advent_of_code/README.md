@@ -146,7 +146,9 @@ The inevitable parsing-mathematical-expressions problem. Part 1 was very straigh
 
 ## day22.clj
 
-Day 22 (--/--).
+Day 22 (2944/6251).
+
+Part 1 went fairly well, and I got my best-yet finishing placement for 2022. Part 2, though, was twisty af. I ended up having to make a paper cube like almost everyone else. In the end, though, I only had one actual bug in the part 2 code and that was using the wrong variable name in a `cond` block. That said, part 2 is way more brute-force than I like. But it's after 3PM and I have no interest in trying to optimize the code, at least not right now.
 
 ## day23.clj
 
