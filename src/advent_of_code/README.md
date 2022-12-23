@@ -152,7 +152,9 @@ Part 1 went fairly well, and I got my best-yet finishing placement for 2022. Par
 
 ## day23.clj
 
-Day 23 (--/--).
+Day 23 (10535/10289).
+
+This should have been a breeze: it's a familiar pattern, and one that I've solved many times in past AoC years. But a dumb mistake on the east/west movement and I was forever trying to debug part 1. Once done, part 2 took less than 5 minutes.
 
 ## day24.clj
 
