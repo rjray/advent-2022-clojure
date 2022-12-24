@@ -158,7 +158,11 @@ This should have been a breeze: it's a familiar pattern, and one that I've solve
 
 ## day24.clj
 
-Day 24 (--/--).
+Day 24 (8451/8206).
+
+A search problem with a twist: the "maze" changes each round. My first attempt at a BFS blew up my heap (again, despite having already been upped to 2Gig). A second attempt at BFS handled the heap issues, but took way longer than it should so it got killed. Finally, a simplified search algorithm did the trick, though I was worried it could get stuck in a loop when it didn't.
+
+Part 2 was surprisingly low-key: just got from point A to B as in part 1, then from B to A and A back to B. I had to re-wire some of the functions to carry more state around, and I had to add a boundary-check to keep from moving too far in the Y axis. But the answer came back quickly and (more important) correctly.
 
 ## day25.clj
 
