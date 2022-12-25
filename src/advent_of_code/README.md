@@ -166,4 +166,6 @@ Part 2 was surprisingly low-key: just got from point A to B as in part 1, then f
 
 ## day25.clj
 
-Day 25 (--/--).
+Day 25 (3188/2504).
+
+Part 1 was not too bad. I started a little late, and interrupted it to spend 20 min or so at a neighbor's Christmas Eve party. Part 2, as is custom, was just a give-away if you've reached that point with all 49 previous stars.
